@@ -1,4 +1,4 @@
-// cache variables 
+// cache variables and set initial counter
 
 var choices = ['paper', 'rock', 'scissors'];
 var i = Math.floor(Math.random() * 3);
@@ -15,6 +15,7 @@ function convert(word){
    return '<i class="far fa-hand-scissors"></i>'
 }
 
+// The core game functions that set up and determine the games actual logic
 function game(UserChoice) {
    var box = document.getElementById("challenge");
    box.style.display = "inline-flex";
@@ -31,6 +32,8 @@ function game(UserChoice) {
    else {
       lose(UserChoice);
    }
+
+// Randomly chooses a choice from the options array. This is the Computer's guess.
    function continueGame(){
       i = Math.floor(Math.random() * 3); 
       ComChoice = choices[i]; 
@@ -39,6 +42,7 @@ function game(UserChoice) {
    setTimeout(continueGame, 1200); 
 }
 
+// Winning Condition - this handles what happens when the user clicks one of the choices where the value is them passed through as a parameter
 function win(bn){
    UserPoints++; 
    document.getElementById("who").innerHTML = "You win!"; 
@@ -51,6 +55,7 @@ function win(bn){
    }, 1200); 
 }
 
+// Draw Condition - this handles what happens when the user clicks one of the choices where the value is them passed through as a parameter
 function draw(bn){
    document.getElementById("who").innerHTML = "Draw."; 
    var bn = document.getElementById(bn); 
@@ -62,6 +67,7 @@ function draw(bn){
    }, 1200); 
 }
 
+// Losing Condition - this handles what happens when the user clicks one of the choices where the value is them passed through as a parameter
 function lose(bn){
    ComPoints++; 
    document.getElementById("who").innerHTML = "You lose..."; 
