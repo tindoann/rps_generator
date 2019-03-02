@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
 
-*{
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-}
+
 
 body{
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
 	background-color: #24272E;
 	font-family: Asap, sans-serif; 
 }
@@ -24,9 +23,7 @@ header h1{
 	margin: 0; 
 }
 
-
 .container{
-	display: flex; 
 	position: relative; 
 	height: 85%; 
 	width: 100%; 
@@ -36,11 +33,10 @@ header h1{
 }
 
 .score-container{
-	justify-content: space-between; 
 	position: relative; 
 	margin: 0 auto; 
-	width: 500px; 
-	height: 50px; 
+	width: 150px; 
+	height: 40px; 
 	color: white; 
 }
 
@@ -55,7 +51,7 @@ header h1{
 	position: absolute; 
 	left: 0; 
 	top: 50%; 
-	transform: translateX(-50%, -50%); 
+	transform: translate(-50%, -50%); 
 	background-color: #e14a67; 
 	width: 40px; 
 	height: 15px; 
@@ -68,7 +64,7 @@ header h1{
 	position: absolute; 
 	right: 0; 
 	top: 50%; 
-	transform: translateX(50%, -50%); 
+	transform: translate(50%, -50%); 
 	background-color: #e14a67; 
 	width: 40px; 
 	height: 15px; 
@@ -78,13 +74,11 @@ header h1{
 }
 
 .buttons{
-	display: flex; 
-	justify-content: space-between;
-	width: 380px; 
+	width: 280px; 
 	position: absolute; 
 	top: 120px; 
 	left: 50%; 
-	transform: translate(-50%); 
+	transform: translateX(-50%); 
 }
 
 .bn{
@@ -107,37 +101,26 @@ header h1{
 	color: white; 
 }
 
-.challenge{
+#challenge{
 	position: absolute; 
-	top: 350px; 
+	top: 43%; 
 	left: 50%; 
-	transform: translate(-50%); 
-	width: 600px; 
+	transform: translateX(-50%); 
+	width: 540px; 
 	height: 40%; 
-	display: flex; 
-	justify-content: space-between; 
-	align-content: flex-start; 
-	
+	display: none; 
 }
 
-.btn{
-	width: 80px; 
-	height: 80px; 
-	margin: 5px; 
-	border: 3px solid #34495e; 
-	border-radius: 50%; 
-	color: #34495e; 
-	font-size: 40px; 
-	background-color: white; 
-	cursor: pointer; 
-	outline: none; 
-	transition: .3s; 
+#you{
+	position: relative; 
+	width: 37.5%; 
+	font-size: 50%; 
 }
 
-.btn:hover{
-	background-color: #34495e; 
-	border-color: white; 
-	color: white; 
+#com{
+	position: relative; 
+	width: 37.5%; 
+	font-size: 50px; 
 }
 
 #YourObject{
@@ -189,6 +172,60 @@ header h1{
 	width: 100%; 
 	margin: 0; 
 	text-align: center; 
+}
+
+.who{
+	position: absolute; 
+	bottom: 5%; 
+	left: 50%; 
+	transform: translateX(-50%); 
+	color: white; 
+	font-size: 30px; 
+}
+
+.green{
+	width: 70px; 
+	height: 70px; 
+	margin: 5px; 
+	border: 3px solid lightGreen; 
+	box-shadow: 0 0 10px lightGreen; 
+	border-radius: 50%; 
+	color: #34495e; 
+	font-size: 35px; 
+	background-color: white; 
+	cursor: pointer; 
+	outline: none; 
+	transition: .3s; 
+}
+
+.red{
+	width: 70px; 
+	height: 70px; 
+	margin: 5px; 
+	border: 3px solid red; 
+	box-shadow: 0 0 10px red; 
+	border-radius: 50%; 
+	color: #34495e; 
+	font-size: 35px; 
+	background-color: white; 
+	cursor: pointer; 
+	outline: none; 
+	transition: .3s; 
+}
+
+.gray{
+	width: 70px; 
+	height: 70px; 
+	margin: 5px; 
+	border: 3px solid 292928; 
+	box-shadow: 0 0 10px 292928; 
+	border-radius: 50%; 
+	color: #34495e; 
+	font-size: 35px; 
+	background-color: white; 
+	cursor: pointer; 
+	outline: none; 
+	transition: .3s; 
 }
 
 

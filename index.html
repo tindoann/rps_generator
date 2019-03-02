@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Rock Paper Scissors Game</title>
 </head>
@@ -13,34 +14,30 @@
     <h1>Rock Paper Scissors Game</h1>
   </header>
 
-<main>
   <div class="container">
     <div class="score-container">
       <span class="user">YOU</span>
-      <span id="score">0 - 0</span>
+      <span id="score"></span>
       <span class="com">COM</span>
     </div>
     <div class="buttons">
-      <button class="bn" onclick="" value=""><img src="images/rock.png" alt=""></button>
-      <button class="bn" onclick="" value=""><img src="images/paper.png" alt=""></button>
-      <button class="bn" onclick="" value=""><img src="images/scissors.png" alt=""></button>
+      <button id="paper" class="bn" onclick="game(this.value)" value="paper"><i class="far fa-hand-paper"></i></button>
+      <button id="rock" class="bn" onclick="game(this.value)" value="rock"><i class="far fa-hand-rock"></i></button>
+      <button id="scissors" class="bn" onclick="game(this.value)" value="scissors"><i class="far fa-hand-scissors"></i></button>
     </div>
   </div>
-  <div class="challenge-container">
-  <div class="challenge">
-    <div id="you">
-      <button class="btn"><img src="images/paper.png" alt=""></button>
+    <div id="challenge">
+      <div id="you">
+        <div id="YourObject"></div>
+        <div class="who">You</div>
+      </div>
+      <div id="result"><p id="who">you win</p></div>
+      <div id="com">
+        <div id="ComObject"></div>
+        <div class="who">Computer</div>
+      </div>
     </div>
-    <div id="result">
-      <p>You win!</p>
-    </div>
-    <div id="com">
-      <button class="btn"><img src="images/rock.png" alt=""></button>
-    </div>
-  </div>
-  </div>
-</main>
-  <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="rps.js"></script>
 </body>
 
 </html>
